@@ -1,0 +1,41 @@
+
+footer{
+    background: #F5FBFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.title-footer{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.icon{
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    transition: tranform 0.5s ease-in-out;
+}
+
+.icon:hover{
+    transform: scale(1.09);
+}
+
+.attribution{
+    display: flex;
+    align-content: center;
+    margin: 2.5rem auto 5px;
+}
+
+.attribution p{
+    font-size: .9rem;
+}
+
+.heart{
+    width: .9rem;
+    height: .9rem;
+    margin: auto 5px;
+}
