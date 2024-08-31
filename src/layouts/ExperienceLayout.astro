@@ -1,0 +1,13 @@
+---
+import ExperienceCard from "@components/ExperienceCard.astro";
+import type { Experience } from "../types";
+
+type Props = {
+  experience: Experience[],
+}
+
+const { experience } = Astro.props;
+---
+<ul>
+  {experience.map((exp) => <ExperienceCard {...exp} /> )}
+</ul>

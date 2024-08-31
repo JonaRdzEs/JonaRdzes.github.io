@@ -1,0 +1,9 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<"a">
+const props = Astro.props;
+---
+
+<a {...props} target="_blank" rel="noopener noreferrer" class="bg-cosmic-silver flex justify-center items-center w-10 h-10 rounded-full">
+  <slot />
+</a>
