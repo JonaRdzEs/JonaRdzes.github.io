@@ -1,0 +1,7 @@
+{
+    "greeting": "¡Hola! Soy,",
+    "title": "Desarrollador Frontend",
+    "about-me.title": "Sobre mí",
+    "about-me.text": "Soy un desarrollador web con un enfoque en el frontend, apasionado por crear experiencias digitales atractivas y funcionales. Mi principal herramienta es ReactJS, con la cual he desarrollado componentes dinámicos y reutilizables para construir sitios y aplicaciones web responsivos. Además, estoy explorando activamente el mundo del backend, con el objetivo de ampliar mis habilidades y ofrecer soluciones más completas. Me motiva el aprendizaje continuo y estoy siempre en busca de nuevas tecnologías y oportunidades para crecer profesionalmente. Mi objetivo es combinar mi creatividad y conocimiento técnico para diseñar y desarrollar productos que no solo funcionen bien, sino que también ofrezcan una experiencia memorable a los usuarios.",
+    "experience.title": "Experiencia"
+}

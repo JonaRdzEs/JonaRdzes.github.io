@@ -1,0 +1,14 @@
+---
+import type { Project } from "@types";
+import ProjectCard from "@components/ProjectCard.astro";
+
+type Props = {
+  projects: Project[],
+}
+
+const { projects } = Astro.props;
+---
+
+<ul class="flex flex-col gap-4">
+  {projects.map((project) => <li><ProjectCard {...project} /></li>)}
+</ul>

@@ -6,54 +6,66 @@ import Email from "@components/icons/Email.astro";
 import CV from "@components/icons/CV.astro";
 import Section from "@layouts/Section.astro";
 import Text from "@components/Text.astro";
-import ExperienceCard from "@components/ExperienceCard.astro";
+import ExperienceLayout from "@layouts/ExperienceLayout.astro";
+import ProjectsLayout from "@layouts/ProjectsLayout.astro";
+import { experience, projects } from "../data/experience.ts";
 ---
 
-<Layout title="Portfolio de Jonathan Rodriguez - Desarrollador Frontend Especializado en ReactJS">
-  <main class="container mx-auto border-2 border-white pt-40 pb-7 px-4">
-    <div class="relative bg-midnight-black">
-      <div class="w-full pt-1">
-        <h1 class="text-2xl text-celestial-white font-extrabold text-center">
-          ¡Hola! Soy, <br /> Jonathan Rodríguez
-        </h1>
-        <h2 class="text-center">Desarrollador Frontend</h2>
-      </div>
-      <img class="w-full absolute h-32 -top-32 -z-10 object-cover object-top" src="/astronaut.svg" alt="astronauta saludando" />
+<Layout
+  lang="es"
+  title="Portfolio de Jonathan Rodriguez - Desarrollador Frontend Especializado en ReactJS"
+>
+  <div class="relative bg-midnight-black">
+    <div class="w-full pt-1">
+      <h1 class="text-2xl text-celestial-white font-extrabold text-center">
+        ¡Hola! Soy, <br /> Jonathan Rodríguez
+      </h1>
+      <h2 class="text-center">Desarrollador Frontend</h2>
     </div>
-    <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-3">
-      <IconLink href="https://github.com/JonaRdzEs">
-        <Email />
-      </IconLink>
-      <IconLink href="https://github.com/JonaRdzEs">
-        <Github />
-      </IconLink>
-      <IconLink href="https://github.com/JonaRdzEs">
-        <CV />
-      </IconLink>
-    </div>
-    <Section title="Sobre mí">
-      <Text>
-        Soy un desarrollador web con un enfoque en el frontend, apasionado por
-        crear experiencias digitales atractivas y funcionales. Mi principal
-        herramienta es ReactJS, con la cual he desarrollado componentes
-        dinámicos y reutilizables para construir sitios y aplicaciones web
-        responsivos. Además, estoy explorando activamente el mundo del backend,
-        con el objetivo de ampliar mis habilidades y ofrecer soluciones más
-        completas. Me motiva el aprendizaje continuo y estoy siempre en busca de
-        nuevas tecnologías y oportunidades para crecer profesionalmente. Mi
-        objetivo es combinar mi creatividad y conocimiento técnico para diseñar
-        y desarrollar productos que no solo funcionen bien, sino que también
-        ofrezcan una experiencia memorable a los usuarios.
+    <img
+      class="w-full absolute h-32 -top-32 -z-10 object-cover object-top"
+      src="/astronaut.svg"
+      alt="astronauta saludando"
+    />
+  </div>
+  <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-3">
+    <IconLink href="https://github.com/JonaRdzEs">
+      <Email />
+    </IconLink>
+    <IconLink href="https://github.com/JonaRdzEs">
+      <Github />
+    </IconLink>
+    <IconLink href="https://github.com/JonaRdzEs">
+      <CV />
+    </IconLink>
+  </div>
+  <Section title="Sobre mí">
+    <Text>
+      Soy un desarrollador web con un enfoque en el frontend, apasionado por
+      crear experiencias digitales atractivas y funcionales. Mi principal
+      herramienta es ReactJS, con la cual he desarrollado componentes dinámicos
+      y reutilizables para construir sitios y aplicaciones web responsivos.
+      Además, estoy explorando activamente el mundo del backend, con el objetivo
+      de ampliar mis habilidades y ofrecer soluciones más completas. Me motiva
+      el aprendizaje continuo y estoy siempre en busca de nuevas tecnologías y
+      oportunidades para crecer profesionalmente. Mi objetivo es combinar mi
+      creatividad y conocimiento técnico para diseñar y desarrollar productos
+      que no solo funcionen bien, sino que también ofrezcan una experiencia
+      memorable a los usuarios.
+    </Text>
+  </Section>
+  <Section title="Experiencia">
+    <ExperienceLayout experiences={experience} />
+  </Section>
+  <Section title="Proyectos personales">
+    <>
+      <Text class="text-sm mb-3">
+        Los siguientes son algunos de los proyectos que he desarrollado en mi
+        tiempo libre, los cuales me han permitido explorar y aprender nuevas
+        tecnologías. Cada uno de estos proyectos ha sido una oportunidad para
+        profundizar mis conocimientos y poner en práctica lo que he aprendido.
       </Text>
-    </Section>
-    <Section title="Experiencia">
-      <ExperienceCard
-        title="Desarrollo de aplicaciones"
-        description="Contribuí al desarrollo de una aplicación utilizando arquitectura de microfrontends, donde diseñé interfaces de usuario basadas en Figma, gestioné el estado global con Zustand, e implementé la internacionalización con React-intl."
-      />
-    </Section>
-    <Section title="Proyectos personales">
-      <Text>Mis proyectos</Text>
-    </Section>
-  </main>
+      <ProjectsLayout projects={projects} />
+    </>
+  </Section>
 </Layout>

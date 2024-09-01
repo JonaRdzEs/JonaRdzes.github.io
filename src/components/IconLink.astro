@@ -4,6 +4,6 @@ type Props = HTMLAttributes<"a">
 const props = Astro.props;
 ---
 
-<a {...props} target="_blank" rel="noopener noreferrer" class="bg-cosmic-silver flex justify-center items-center w-10 h-10 rounded-full">
+<a {...props} target="_blank" rel="noopener noreferrer" class="hover:bg-cosmic-silver bg-cosmic-silver/25 flex justify-center items-center w-10 h-10 rounded-full">
   <slot />
 </a>
