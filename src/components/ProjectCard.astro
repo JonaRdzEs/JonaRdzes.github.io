@@ -9,16 +9,16 @@ type Props = Project;
 const { title, image, description, sourceCodeUrl, url } = Astro.props;
 ---
 
-<section class="bg-cosmic-silver/25 rounded-md p-4">
+<section class="bg-cosmic-silver/15 rounded-md p-4">
   <img src={image} class="w-full h-24 rounded-md object-cover" />
   <h2 class="text-base font-extrabold text-celestial-white my-2">{title}</h2>
   <p class="text-sm text-stellar-silver">{description}</p>
   <div class="flex justify-end items-center gap-2 mt-3">
-    <IconLink href={sourceCodeUrl}>
-      <Code />
+    <IconLink href={sourceCodeUrl} class={"bg-transparent"}>
+      <Code class="w-5 h-5"/>
     </IconLink>
-    <IconLink href={url}>
-      <Link />
+    <IconLink href={url} class={"bg-transparent"}>
+      <Link class="w-5 h-5" />
     </IconLink>
   </div> 
 </section>

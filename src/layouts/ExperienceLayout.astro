@@ -6,29 +6,21 @@ type Props = {
   experiences: Experiences[];
 };
 
-/* const planetIcons = {
-  "0": "/images/planets/uranus.svg",
-  "1": "/saturn.svg",
-  "2": "/jupiter.svg",
-  "3": "/mars.svg",
-  "4": "/moon.svg",
-  "5": "/earth.svg",
-};
- */
 const { experiences } = Astro.props;
 ---
 
 <ul class="relative">
   <div class="absolute w-full h-full border-l-2 border-cosmic-silver">
-    <img class="relative -left-2.5 w-5 h-5 -rotate-45" src="/rocket.svg" />
+    <img class="relative -left-2.5 w-5 h-5 top-1 -rotate-45" src="/rocket.svg" />
   </div>
   {
     experiences.map((exp) => (
       <li class="my-5">
-        <h2 class="text-aurora-blue font-bold pl-4 mb-3">{exp.period}</h2>
+        <h2 class="text-aurora-blue font-bold pl-4 mb-3 text-lg">{exp.period}</h2>
         <ul class="relative flex flex-col gap-4 pl-4">
-          {exp.experiences.map((el, idx) => (
-            <li class={`relative before:content-[url('/images/planets/uranus.svg')] before:absolute before:w-4 before:h-4 before:-left-6`}>
+          {exp.experiences.map((el) => (
+            <li class={`relative`}>
+              <img src={el.icon} class="absolute w-5 h-5 -left-6 top-4" />
               <ExperienceCard {...el} />
             </li>
           ))}
