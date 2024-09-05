@@ -3,24 +3,24 @@ import ExperienceCard from "@components/ExperienceCard.astro";
 import type { Experiences } from "../types";
 
 type Props = {
-  experiences: Experiences[];
+  experience: Experiences[];
 };
 
-const { experiences } = Astro.props;
+const { experience } = Astro.props;
 ---
 
-<ul class="relative">
+<ul class="relative lg:w-10/12 lg:mx-auto xl:w-7/12">
   <div class="absolute w-full h-full border-l-2 border-cosmic-silver">
-    <img class="relative -left-2.5 w-5 h-5 top-1 -rotate-45" src="/rocket.svg" />
+    <img class="relative -left-2.5 w-5 h-5 top-1 -rotate-45 md:w-8 md:h-8 md:-left-4" src="/rocket.svg" />
   </div>
   {
-    experiences.map((exp) => (
+    experience.map((exp) => (
       <li class="my-5">
-        <h2 class="text-aurora-blue font-bold pl-4 mb-3 text-lg">{exp.period}</h2>
-        <ul class="relative flex flex-col gap-4 pl-4">
-          {exp.experiences.map((el) => (
+        <h2 class="text-electric-blue font-bold pl-4 mb-3 text-lg md:pl-10 xl:text-xl">{exp.period}</h2>
+        <ul class="relative flex flex-col gap-4 pl-4 md:pl-10">
+          {exp.contributions.map((el) => (
             <li class={`relative`}>
-              <img src={el.icon} class="absolute w-5 h-5 -left-6 top-4" />
+              <img src={el.icon} class="absolute w-5 h-5 -left-6 top-4 md:w-8 md:h-8 md:-left-14" />
               <ExperienceCard {...el} />
             </li>
           ))}

@@ -1,7 +1,79 @@
 {
+    "page_title": "Portfolio de Jonathan Rodriguez - Desarrollador Frontend Especializado en ReactJS",
+    "page_description": "Portfolio de desarrollador frontend especializado en ReactJS, con experiencia en el desarrollo de aplicaciones web modernas y componentes reutilizables. Apasionado por el aprendizaje continuo y la creación de experiencias digitales optimizadas.",
     "greeting": "¡Hola! Soy,",
     "title": "Desarrollador Frontend",
-    "about-me.title": "Sobre mí",
-    "about-me.text": "Soy un desarrollador web con un enfoque en el frontend, apasionado por crear experiencias digitales atractivas y funcionales. Mi principal herramienta es ReactJS, con la cual he desarrollado componentes dinámicos y reutilizables para construir sitios y aplicaciones web responsivos. Además, estoy explorando activamente el mundo del backend, con el objetivo de ampliar mis habilidades y ofrecer soluciones más completas. Me motiva el aprendizaje continuo y estoy siempre en busca de nuevas tecnologías y oportunidades para crecer profesionalmente. Mi objetivo es combinar mi creatividad y conocimiento técnico para diseñar y desarrollar productos que no solo funcionen bien, sino que también ofrezcan una experiencia memorable a los usuarios.",
-    "experience.title": "Experiencia"
+    "about_me_title": "Sobre mí",
+    "about_me_description": "Soy un desarrollador web con un enfoque en el frontend, apasionado por crear experiencias digitales atractivas y funcionales. Mi principal herramienta es ReactJS, con la cual he desarrollado componentes dinámicos y reutilizables para construir sitios y aplicaciones web responsivos. Además, estoy explorando activamente el mundo del backend, con el objetivo de ampliar mis habilidades y ofrecer soluciones más completas. Me motiva el aprendizaje continuo y estoy siempre en busca de nuevas tecnologías y oportunidades para crecer profesionalmente.",
+    "experience_title": "Experiencia",
+    "experience": [
+        {
+            "period": "Febrero 2022 - Presente",
+            "contributions": [
+                {
+                    "title": "Desarrollo de aplicaciones",
+                    "description": "Contribuí al desarrollo de una aplicación utilizando arquitectura de microfrontends, donde diseñé interfaces de usuario basadas en Figma, gestioné el estado global con Zustand, e implementé la internacionalización con React-intl.",
+                    "icon": "/images/planets/uranus.svg"
+                },
+                {
+                    "title": "Creación de componentes",
+                    "description": "Desarrollé y probé componentes reutilizables en ReactJS para una librería privada, garantizando su calidad y funcionalidad mediante pruebas rigurosas con Jest y React Testing Library.",
+                    "icon": "/images/planets/saturn.svg"
+                },
+                {
+                    "title": "Desarrollo de API Rest",
+                    "description": "Desarrollé e implementé endpoints API REST para operaciones CRUD y autenticación utilizando Express y JWT, integrando y consumiendo estas API en JavaScript para asegurar una comunicación eficiente entre el frontend y el backend.",
+                    "icon": "/images/planets/jupiter.svg"
+                },
+                {
+                    "title": "Desarrollo de extensión web",
+                    "description": "Contribuí al desarrollo de una extensión web diseñada para ayudar a equipos de marketing a crear campañas de correo electrónico utilizando IA. Participé activamente en el proceso de diseño y en la implementación de funcionalidades clave, asegurando una experiencia de usuario intuitiva y efectiva.",
+                    "icon": "/images/planets/mars.svg"
+                },
+                {
+                    "title": "Colaboración en código",
+                    "description": "Resolví bugs y refactoricé código para optimizar la eficiencia y el mantenimiento de las aplicaciones, mientras colaboraba activamente en la contribución y revisión de código con Git, asegurando la calidad y coherencia del proyecto.",
+                    "icon": "/images/planets/moon.svg"
+                }
+            ]
+        },
+        {
+            "period": "Agosto 2021 - Febrero 2022",
+            "contributions": [
+                {
+                    "title": "Prácticas profesionales",
+                    "description": "Durante mis prácticas profesionales en FullStack, colaboré en la creación de historias de usuario y participé activamente en el desarrollo de un proyecto interno. Trabajé en estrecha colaboración con los equipos de diseño y backend para asegurar la entrega exitosa de interfaces de usuario, utilizando React como la tecnología principal en el frontend. Esta experiencia me permitió practicar una arquitectura basada en componentes reutilizables y manejar el estado global de la aplicación con Redux.",
+                    "icon": "/images/planets/earth.svg"
+                }
+            ]
+        }
+    ],
+    "personal_projects_title": "Proyectos personales", 
+    "personal_projects_description": "Los siguientes son algunos de los proyectos que he desarrollado en mi tiempo libre, los cuales me han permitido explorar y aprender nuevas tecnologías. Cada uno de estos proyectos ha sido una oportunidad para profundizar mis conocimientos y poner en práctica lo que he aprendido.",
+    "projects": [
+        {
+            "image": "/images/projects/book-mate.png",
+            "title": "BookMate",
+            "description":
+              "Aplicación web para registrar sesiones de tecnología, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Redux para la gestión eficiente del estado global.",
+            "sourceCodeUrl": "https://github.com/JonaRdzEs/book-a-session",
+            "url": "https://jonardzes.github.io/book-a-session/"
+          },
+          {
+            "image": "/images/projects/event-voyager.png",
+            "title": "Event Voyager",
+            "description":
+              "Aplicación web para registrar eventos en distintos países, desarrollada con Next.js 12 para optimización y rendimiento, y estilizada con Tailwind para un diseño moderno y adaptable.",
+            "sourceCodeUrl": "https://github.com/JonaRdzEs/events_app",
+            "url": "https://events-app-steel.vercel.app/"
+          },
+          {
+            "image": "/images/projects/todo-app.png",
+            "title": "Todo app",
+            "description":
+              "Aplicación de gestión de tareas inspirada en el reto de Frontend Mentor, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Zustand para una gestión de estado global eficiente.",
+            "sourceCodeUrl": "https://github.com/JonaRdzEs/to-do-app",
+            "url": "https://jonardzes.github.io/to-do-app/"
+          }
+    ]
 }

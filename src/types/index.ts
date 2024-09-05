@@ -1,6 +1,6 @@
 export type Experiences = {
   period: string,
-  experiences: Experience[],
+  contributions: Experience[],
 };
 
 export type Experience = {

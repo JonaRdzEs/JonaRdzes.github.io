@@ -15,6 +15,7 @@ export default {
       "cosmic-silver": "#3D3D3D",
       "stellar-silver": "#B0B0B0",
       "aurora-blue": "#176FA6",
+      "electric-blue": "#1E90FF"
     },
   },
   plugins: [],

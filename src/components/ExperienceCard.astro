@@ -6,7 +6,7 @@ type Props = Experience;
 const { title, description } = Astro.props;
 ---
 
-<section class="bg-cosmic-silver rounded-md p-4">
-  <h4 class="text-base font-bold text-celestial-white mb-2">{title}</h4>
-  <p class="text-sm text-stellar-silver">{description}</p>
+<section class="bg-cosmic-silver rounded-md p-4 max-w-screen-sm">
+  <h4 class="text-base font-bold text-celestial-white mb-2 xl:text-lg">{title}</h4>
+  <p class="text-sm text-stellar-silver xl:text-base">{description}</p>
 </section>

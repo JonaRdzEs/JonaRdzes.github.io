@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
 import IconLink from "@components/IconLink.astro";
 import Github from "@components/icons/Github.astro";
 import Email from "@components/icons/Email.astro";
@@ -8,63 +8,65 @@ import Section from "@layouts/Section.astro";
 import Text from "@components/Text.astro";
 import ExperienceLayout from "@layouts/ExperienceLayout.astro";
 import ProjectsLayout from "@layouts/ProjectsLayout.astro";
-import { experience, projects } from "../data/experience.ts";
+import info from "../data/info-es.json";
+
+const {
+  page_title,
+  page_description,
+  greeting, 
+  title, 
+  about_me_title,
+  about_me_description,
+  experience_title,
+  experience,
+  personal_projects_title,
+  personal_projects_description,
+  projects
+} = info;
+
 ---
 
 <Layout
   lang="es"
-  title="Portfolio de Jonathan Rodriguez - Desarrollador Frontend Especializado en ReactJS"
+  title={page_title}
+  description={page_description}
 >
-  <div class="relative bg-midnight-black">
-    <img class="w-7/12 mx-auto"src="/astronaut-mobile.png" alt="astronauta saludando" />
-    <div class="w-full pt-1">
-      <h1 class="text-2xl text-celestial-white font-extrabold text-center">
-        ¡Hola! Soy, <br /> Jonathan Rodríguez
-      </h1>
-      <h2 class="text-center font-bold bg-gradient-to-t from-[#3DA35D] from-8% to-aurora-blue to-58% text-transparent bg-clip-text">Desarrollador Frontend</h2>
+  <div class="relative flex flex-col-reverse sm:flex sm:justify-center sm:items-center sm:flex-row md:w-10/12 mx-auto ">
+    <div>
+      <div class="w-full pt-1">
+        <h1 class="text-3xl text-celestial-white font-extrabold text-center sm:text-left md:text-4xl xl:text-6xl">
+          {greeting} <br /> Jonathan Rodríguez
+        </h1>
+        <h2 class="text-center font-bold text-electric-blue md:text-2xl lg:text-3xl sm:text-left">{title}</h2>
+      </div>
+      <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-3 sm:justify-start">
+        <IconLink href="https://github.com/JonaRdzEs">
+          <Email />
+        </IconLink>
+        <IconLink href="https://github.com/JonaRdzEs">
+          <Github />
+        </IconLink>
+        <IconLink href="https://github.com/JonaRdzEs">
+          <CV />
+        </IconLink>
+      </div>
     </div>
     <img
-      class="hidden absolute h-32 -top-32 -z-10 object-cover object-top"
-      src="/astronaut-mobile.svg"
+      class="w-10/12 h-full max-h-72 sm:w-6/12 mx-auto xl:w-5/12 xl:max-h-none"
+      src="/astronaut.svg"
       alt="astronauta saludando"
     />
   </div>
-  <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-3">
-    <IconLink href="https://github.com/JonaRdzEs">
-      <Email />
-    </IconLink>
-    <IconLink href="https://github.com/JonaRdzEs">
-      <Github />
-    </IconLink>
-    <IconLink href="https://github.com/JonaRdzEs">
-      <CV />
-    </IconLink>
-  </div>
-  <Section title="Sobre mí">
-    <Text>
-      Soy un desarrollador web con un enfoque en el frontend, apasionado por
-      crear experiencias digitales atractivas y funcionales. Mi principal
-      herramienta es ReactJS, con la cual he desarrollado componentes dinámicos
-      y reutilizables para construir sitios y aplicaciones web responsivos.
-      Además, estoy explorando activamente el mundo del backend, con el objetivo
-      de ampliar mis habilidades y ofrecer soluciones más completas. Me motiva
-      el aprendizaje continuo y estoy siempre en busca de nuevas tecnologías y
-      oportunidades para crecer profesionalmente. Mi objetivo es combinar mi
-      creatividad y conocimiento técnico para diseñar y desarrollar productos
-      que no solo funcionen bien, sino que también ofrezcan una experiencia
-      memorable a los usuarios.
-    </Text>
+  <Section title={about_me_title}>
+    <Text class="md:text-base xl:w-10/12 xl:mx-auto xl:text-lg">{about_me_description}</Text>
   </Section>
-  <Section title="Experiencia">
-    <ExperienceLayout experiences={experience} />
+  <Section title={experience_title}>
+    <ExperienceLayout experience={experience} />
   </Section>
-  <Section title="Proyectos personales">
+  <Section title={personal_projects_title}>
     <>
-      <Text class="text-sm mb-3">
-        Los siguientes son algunos de los proyectos que he desarrollado en mi
-        tiempo libre, los cuales me han permitido explorar y aprender nuevas
-        tecnologías. Cada uno de estos proyectos ha sido una oportunidad para
-        profundizar mis conocimientos y poner en práctica lo que he aprendido.
+      <Text class="text-sm mb-3 md:text-base xl:w-10/12 xl:mx-auto xl:text-lg">
+        {personal_projects_description}
       </Text>
       <ProjectsLayout projects={projects} />
     </>
