@@ -23,14 +23,10 @@ const {
   personal_projects_description,
   projects
 } = info;
-
+const eml = "jonathan.rdzes@gmail.com";
 ---
 
-<Layout
-  lang="es"
-  title={page_title}
-  description={page_description}
->
+<Layout lang="es" title={page_title} description={page_description}>
   <div class="relative flex flex-col-reverse sm:flex sm:justify-center sm:items-center sm:flex-row lg:w-10/12 mx-auto">
     <div>
       <div class="w-full pt-1">
@@ -40,10 +36,10 @@ const {
         <h2 class="text-center font-bold mt-2 text-electric-blue md:text-2xl lg:text-3xl sm:text-left">{title}</h2>
       </div>
       <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-10 sm:justify-start">
-        <IconLink href="mailto:jonathan.rdzes@gmail.com">
+        <IconLink href={`mailto:${eml}`} aria-label={`Enviar correro electrónico a ${eml} `} >
           <Email />
         </IconLink>
-        <IconLink href="https://github.com/JonaRdzEs">
+        <IconLink href="https://github.com/JonaRdzEs" aria-label="Visitar mi Github">
           <Github />
         </IconLink>
         <CVButton />

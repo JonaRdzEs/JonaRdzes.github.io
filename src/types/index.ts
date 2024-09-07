@@ -11,6 +11,7 @@ export type Experience = {
 export type Project = {
   title: string,
   image: string,
+  imageAlt: string,
   description: string,
   sourceCodeUrl: string,
   url: string, 

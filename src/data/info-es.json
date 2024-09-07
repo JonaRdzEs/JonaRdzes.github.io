@@ -47,6 +47,7 @@
     "projects": [
         {
             "image": "/images/projects/book-mate.png",
+            "imageAlt": "Página principal de aplicación BookMate",
             "title": "BookMate",
             "description":
               "Aplicación web para registrar sesiones de tecnología, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Redux para la gestión eficiente del estado global.",
@@ -55,6 +56,7 @@
           },
           {
             "image": "/images/projects/event-voyager.png",
+            "imageAlt": "Página principal de aplicación Event Voyager",
             "title": "Event Voyager",
             "description":
               "Aplicación web para registrar eventos en distintos países, desarrollada con Next.js 12 para optimización y rendimiento, y estilizada con Tailwind para un diseño moderno y adaptable.",
@@ -63,6 +65,7 @@
           },
           {
             "image": "/images/projects/todo-app.png",
+            "imageAlt": "Página principal de aplicación para tareas",
             "title": "Todo app",
             "description":
               "Aplicación de gestión de tareas inspirada en el reto de Frontend Mentor, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Zustand para la gestión de estado",

@@ -6,19 +6,19 @@ import Link from "@components/icons/Link.astro";
 
 type Props = Project;
 
-const { title, image, description, sourceCodeUrl, url } = Astro.props;
+const { title, image, description, sourceCodeUrl, url, imageAlt } = Astro.props;
 ---
 
-<section class="rounded-md p-4 max-w-xs lg:max-w-sm mx-auto shadow-sm shadow-cosmic-silver/65">
-  <img src={image} class="w-full h-36 rounded-md object-cover" />
+<article class="rounded-md p-4 max-w-xs lg:max-w-sm mx-auto shadow-sm shadow-cosmic-silver/65">
+  <img src={image} class="w-full h-36 rounded-md object-cover" alt={imageAlt} />
   <h2 class="text-base font-extrabold text-celestial-white my-2 lg:text-lg">{title}</h2>
   <p class="text-sm text-stellar-silver xl:text-base">{description}</p>
   <div class="flex justify-end items-center gap-2 mt-4">
-    <IconLink href={sourceCodeUrl}>
+    <IconLink href={sourceCodeUrl} aria-label={`Ver código de ${title}`} >
       <Code class="w-5 h-5"/>
     </IconLink>
-    <IconLink href={url}>
+    <IconLink href={url} aria-label={`Ver aplicación ${title}`}>
       <Link class="w-5 h-5" />
     </IconLink>
   </div> 
-</section>
+</article>
