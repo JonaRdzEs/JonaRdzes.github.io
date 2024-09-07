@@ -6,7 +6,6 @@ export type Experiences = {
 export type Experience = {
   title: string,
   description: string,
-  icon: string,
 }
 
 export type Project = {
