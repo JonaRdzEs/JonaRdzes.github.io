@@ -1,0 +1,68 @@
+---
+import Layout from "@layouts/Layout.astro";
+import IconLink from "@components/IconLink.astro";
+import Github from "@components/icons/Github.astro";
+import Email from "@components/icons/Email.astro";
+import Section from "@layouts/Section.astro";
+import Text from "@components/Text.astro";
+import ExperienceLayout from "@layouts/ExperienceLayout.astro";
+import ProjectsLayout from "@layouts/ProjectsLayout.astro";
+import info from "../data/info-es.json";
+import CVButton from "@components/CVButton.astro";
+
+const {
+  page_title,
+  page_description,
+  greeting, 
+  title, 
+  about_me_title,
+  about_me_description,
+  experience_title,
+  experience,
+  personal_projects_title,
+  personal_projects_description,
+  projects
+} = info;
+const eml = "jonathan.rdzes@gmail.com";
+---
+
+<Layout lang="es" title={page_title} description={page_description}>
+  <div class="relative flex flex-col-reverse sm:flex sm:justify-center sm:items-center sm:flex-row lg:w-10/12 mx-auto">
+    <div>
+      <div class="w-full pt-1">
+        <h1 class="text-3xl text-celestial-white font-extrabold text-center sm:text-left md:text-4xl xl:text-6xl">
+          {greeting} <br /> Jonathan Rodríguez
+        </h1>
+        <h2 class="text-center font-bold mt-2 text-electric-blue md:text-2xl lg:text-3xl sm:text-left">{title}</h2>
+      </div>
+      <div class="w-full flex justify-center items-center flex-wrap gap-4 mt-10 sm:justify-start">
+        <IconLink href={`mailto:${eml}`} aria-label={`Enviar correro electrónico a ${eml} `} >
+          <Email />
+        </IconLink>
+        <IconLink href="https://github.com/JonaRdzEs" aria-label="Visitar mi Github">
+          <Github />
+        </IconLink>
+        <CVButton />
+      </div>
+    </div>
+    <img
+      class="w-10/12 h-full max-h-72 sm:w-5/12 mx-auto sm:ml-auto sm:mr-0 lg:max-h-none"
+      src="/images/astronaut.svg"
+      alt="astronauta entre planetas"
+    />
+  </div>
+  <Section title={about_me_title}>
+    <Text class="md:text-base xl:w-10/12 xl:mx-auto xl:text-lg">{about_me_description}</Text>
+  </Section>
+  <Section title={experience_title}>
+    <ExperienceLayout experience={experience} />
+  </Section>
+  <Section title={personal_projects_title}>
+    <>
+      <Text class="text-sm mb-3 md:text-base xl:w-10/12 xl:mx-auto xl:text-lg">
+        {personal_projects_description}
+      </Text>
+      <ProjectsLayout projects={projects} />
+    </>
+  </Section>
+</Layout>

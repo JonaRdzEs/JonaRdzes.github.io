@@ -1,0 +1,37 @@
+---
+import Briefcase from "@components/icons/Briefcase.astro";
+import ExperienceCard from "@components/ExperienceCard.astro";
+import type { Experiences } from "../types";
+
+type Props = {
+  experience: Experiences[];
+};
+
+const { experience } = Astro.props;
+---
+
+<ul class="relative lg:w-10/12 lg:mx-auto xl:w-8/12">
+  <div class="absolute w-full h-full border-dashed border-l-2 border-cosmic-silver -z-10">
+    <img class="relative -left-2.5 w-5 h-5 -top-2 md:w-8 md:h-8 md:-left-3" src="/images/astro-flag.svg" alt="icono de astronauta con bandera" />
+  </div>
+  {
+    experience.map((exp) => (
+      <li class="my-5">
+        <div class="pl-4 mb-3 md:pl-10">
+          <h3 class="text-electric-blue font-bold  text-lg xl:text-xl">{exp.period}</h3>
+          <a href="https://fstack.tech/" target="_blank" rel="noopener noreferrer" class="text-stellar-silver hover:underline text-sm font-bold flex justify-start items-center gap-1 mt-1">
+             <Briefcase class="w-4 h-4" /> FullStack
+          </a>
+        </div>
+        <ul class="relative flex flex-col gap-4 pl-4 md:pl-10">
+          {exp.contributions.map((el, idx) => (
+            <li class={`relative`}>
+              <img src={`/images/planets/${idx +1}.svg`} class="absolute w-5 h-5 -left-6 top-4 md:w-8 md:h-8 md:-left-14" alt="icono de planeta" />
+              <ExperienceCard {...el} />
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,10 @@
+---
+import type { HTMLAttributes } from "astro/types";
+type Props = HTMLAttributes<"p">
+
+const props = Astro.props;
+---
+
+<p {...props} class={`${props.class || ""} text-sm text-celestial-white`}>
+  <slot />
+</p>
