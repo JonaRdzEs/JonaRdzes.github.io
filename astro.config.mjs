@@ -12,4 +12,5 @@ export default defineConfig({
       prefixDefaultLocale: false,
     }
   } */
+ site: "https://jonardzes.github.io"
 });
