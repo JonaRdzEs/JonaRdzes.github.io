@@ -24,7 +24,11 @@
                 },
                 {
                     "title": "Desarrollo de extensión web",
-                    "description": "Contribuí al desarrollo de una extensión web diseñada para ayudar a equipos de marketing a crear campañas de correo electrónico utilizando IA. Participé activamente en el proceso de diseño y en la implementación de funcionalidades clave, asegurando una experiencia de usuario intuitiva y efectiva."
+                    "description": "Contribuí al desarrollo de una extensión web diseñada para ayudar a equipos de marketing a crear campañas de correo electrónico utilizando IA. Participé activamente en el proceso de diseño y en la implementación de funcionalidades clave, asegurando una experiencia de usuario intuitiva y efectiva.",
+                    "link": {
+                        "text": "Ver",
+                        "url": "https://chromewebstore.google.com/detail/klynk/lnlblmmjfajlbkngilpdfochbffkcngf"
+                    }
                 },
                 {
                     "title": "Colaboración en código",
@@ -37,7 +41,7 @@
             "contributions": [
                 {
                     "title": "Prácticas profesionales",
-                    "description": "Durante mis prácticas profesionales en FullStack, colaboré en la creación de historias de usuario y participé activamente en el desarrollo de un proyecto interno. Trabajé en estrecha colaboración con los equipos de diseño y backend para asegurar la entrega exitosa de interfaces de usuario, utilizando React como la tecnología principal en el frontend. Esta experiencia me permitió practicar una arquitectura basada en componentes reutilizables y manejar el estado global de la aplicación con Redux."
+                    "description": "Durante mis prácticas profesionales colaboré en la creación de historias de usuario y participé activamente en el desarrollo de un proyecto interno. Trabajé en estrecha colaboración con los equipos de diseño y backend para asegurar la entrega exitosa de interfaces de usuario, utilizando React como la tecnología principal en el frontend. Esta experiencia me permitió practicar una arquitectura basada en componentes reutilizables y manejar el estado global de la aplicación con Redux."
                 }
             ]
         }

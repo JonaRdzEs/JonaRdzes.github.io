@@ -3,10 +3,26 @@ import type { Experience } from "@types";
 
 type Props = Experience;
 
-const { title, description } = Astro.props;
+const { title, description, link } = Astro.props;
 ---
 
 <article class="bg-cosmic-silver/25 rounded-md p-4 max-w-screen-md">
-  <h4 class="text-base font-bold text-celestial-white mb-2 xl:text-lg">{title}</h4>
-  <p class="text-sm text-stellar-silver xl:text-base">{description}</p>
+  <h4 class="text-base font-bold text-celestial-white mb-2 xl:text-lg">
+    {title}
+  </h4>
+  <p class="text-sm text-stellar-silver xl:text-base">
+    {description}
+    {
+      link && (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-electric-blue font-semibold underline"
+          href={link.url}
+        >
+          {link.text}
+        </a>
+      )
+    }
+  </p>
 </article>
