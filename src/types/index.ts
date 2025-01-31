@@ -15,10 +15,14 @@ export type Experience = {
 }
 
 export type Project = {
+  slug: string,
   title: string,
-  image: string,
-  imageAlt: string,
   description: string,
   sourceCodeUrl: string,
   url: string, 
+}
+
+export type ProjectImage = {
+  image: ImageMetadata,
+  alt: string,
 }
