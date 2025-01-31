@@ -37,6 +37,6 @@ const {
     <Text class="text-sm mb-10 md:text-base xl:w-10/12 xl:mx-auto xl:text-lg text-center">
       {personal_projects_description}
     </Text>
-    <ProjectsSection projects={projects} client:visible client:only="react" />
+    <ProjectsSection projects={projects} client:load />
   </Section>
 </Layout>

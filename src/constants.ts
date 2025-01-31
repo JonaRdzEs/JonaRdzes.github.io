@@ -1,4 +1,4 @@
-import type { Project, ProjectImage } from "@types";
+import type { ProjectImage } from "@types";
 
 import bookMate from "./assets/projects/book-mate.png";
 import eventVoyager from "./assets/projects/event-voyager.png";
