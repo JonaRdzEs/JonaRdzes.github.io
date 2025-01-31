@@ -26,7 +26,7 @@ export function ProjectsSlider({ projects, onSlideChange = () => {} }: Props) {
       {projects.map((project) => (
         <SwiperSlide
           key={project.url}
-          className="w-full  mx-auto max-w-screen-md"
+          className="w-full mx-auto max-w-screen-md"
         >
           <img
             loading="lazy"
