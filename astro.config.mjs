@@ -1,10 +1,11 @@
 import { defineConfig } from "astro/config";
-
 import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [tailwind(), react()],
   /* i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],
@@ -12,5 +13,5 @@ export default defineConfig({
       prefixDefaultLocale: false,
     }
   } */
- site: "https://jonardzes.github.io"
+  site: "https://jonardzes.github.io"
 });

@@ -1,6 +1,6 @@
 ---
 import Briefcase from "@components/icons/Briefcase.astro";
-import ExperienceCard from "@components/ExperienceCard.astro";
+import ExperienceCard from "@components/ExperienceCard";
 import type { Experiences } from "../types";
 
 type Props = {
@@ -12,7 +12,7 @@ const { experience } = Astro.props;
 
 <ul class="relative lg:w-10/12 lg:mx-auto xl:w-8/12">
   <div class="absolute w-full h-full border-dashed border-l-2 border-cosmic-silver -z-10">
-    <img class="relative -left-2 w-5 h-5 -top-2 md:w-8 md:h-8 md:-left-3" src="/images/astro-flag.svg" alt="icono de astronauta con bandera" />
+    <img loading="lazy" class="relative -left-2 w-5 h-5 -top-2 md:w-8 md:h-8 md:-left-3" src="/images/astro-flag.svg" alt="icono de astronauta con bandera" />
   </div>
   {
     experience.map((exp) => (
@@ -26,8 +26,8 @@ const { experience } = Astro.props;
         <ul class="relative flex flex-col gap-4 pl-4 md:pl-10">
           {exp.contributions.map((el, idx) => (
             <li class={`relative`}>
-              <img src={`/images/planets/${idx +1}.svg`} class="absolute w-5 h-5 -left-6 top-4 md:w-8 md:h-8 md:-left-14" alt="icono de planeta" />
-              <ExperienceCard {...el} />
+              <img loading="lazy" src={`/images/planets/${idx + 1}.svg`} class="absolute w-5 h-5 -left-6 top-4 md:w-8 md:h-8 md:-left-14" alt="icono de planeta" />
+              <ExperienceCard client:visible {...el} delay={(idx + 1)/10} />
             </li>
           ))}
         </ul>

@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import { ImageWrapper } from "./ImageWrapper";
+import astronautImage from "../assets/astronaut.svg";
+---
+
+<ImageWrapper client:visible client:only="react">
+  <Image
+    class="h-72 sm:h-auto sm:max-h-[320px] lg:max-h-none lg:min-h-[450px]"
+    src={astronautImage} 
+    alt="astronauta entre planetas"
+    loading="eager"
+  />
+</ImageWrapper>

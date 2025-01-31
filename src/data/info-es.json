@@ -1,6 +1,6 @@
 {
-    "page_title": "Portfolio de Jonathan Rodriguez - Desarrollador Frontend Especializado en ReactJS",
-    "page_description": "Portfolio de desarrollador frontend especializado en ReactJS, con experiencia en el desarrollo de aplicaciones web modernas y componentes reutilizables. Apasionado por el aprendizaje continuo y la creación de experiencias digitales optimizadas.",
+    "page_title": "Jonathan Rodríguez - Desarrollador Frontend",
+    "page_description": "Portafolio de Jonathan Rodríguez, desarrollador frontend especializado en la creación de aplicaciones web modernas y componentes reutilizables con ReactJS, Next.js y Astro. Apasionado por el aprendizaje continuo y enfocado en ofrecer experiencias digitales rápidas, accesibles y bien diseñadas.",
     "greeting": "¡Hola! Soy,",
     "title": "Desarrollador Frontend",
     "about_me_title": "Sobre mí",
@@ -16,7 +16,7 @@
                 },
                 {
                     "title": "Creación de componentes",
-                    "description": "Desarrollé y probé componentes reutilizables en ReactJS para una librería privada, garantizando su calidad y funcionalidad mediante pruebas rigurosas con Jest y React Testing Library."
+                    "description": "Desarrollé y probé componentes reutilizables en ReactJS para una librería privada, garantizando su calidad y funcionalidad mediante pruebas unitarias con Jest y React Testing Library."
                 },
                 {
                     "title": "Desarrollo de API Rest",
@@ -46,35 +46,36 @@
             ]
         }
     ],
-    "personal_projects_title": "Proyectos personales", 
+    "personal_projects_title": "Proyectos personales",
     "personal_projects_description": "Los siguientes son algunos de los proyectos que he desarrollado en mi tiempo libre, los cuales me han permitido explorar y aprender nuevas tecnologías. Cada uno de estos proyectos ha sido una oportunidad para profundizar mis conocimientos y poner en práctica lo que he aprendido.",
     "projects": [
         {
-            "image": "/images/projects/book-mate.png",
-            "imageAlt": "Página principal de aplicación BookMate",
+            "slug": "book-mate",
             "title": "BookMate",
-            "description":
-              "Aplicación web para registrar sesiones de tecnología, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Redux para la gestión eficiente del estado global.",
+            "description": "Aplicación web para el registro de sesiones de tecnología. Este proyecto me permitió profundizar en React junto con TypeScript, aprender las bases de Redux para el manejo de estado entre componentes y practicar el uso de Tailwind CSS para estilos",
             "sourceCodeUrl": "https://github.com/JonaRdzEs/book-a-session",
             "url": "https://jonardzes.github.io/book-a-session/"
-          },
-          {
-            "image": "/images/projects/event-voyager.png",
-            "imageAlt": "Página principal de aplicación Event Voyager",
+        },
+        {
+            "slug": "event-voyager",
             "title": "Event Voyager",
-            "description":
-              "Aplicación web para registrar eventos en distintos países, desarrollada con Next.js 12 para optimización y rendimiento, y estilizada con Tailwind para un diseño moderno y adaptable.",
+            "description": "Aplicación web para registrar eventos en distintos países. Este proyecto me permitió iniciar con Next.js 12, aprender conceptos fundamentales como Server-Side Rendering (SSR) y seguir una estructura de carpetas organizada para una arquitectura de aplicación eficiente",
             "sourceCodeUrl": "https://github.com/JonaRdzEs/events_app",
             "url": "https://events-app-steel.vercel.app/"
-          },
-          {
-            "image": "/images/projects/todo-app.png",
-            "imageAlt": "Página principal de aplicación para tareas",
+        },
+        {
+            "slug": "todo-app",
             "title": "Todo app",
-            "description":
-              "Aplicación de gestión de tareas inspirada en el reto de Frontend Mentor, desarrollada con React y TypeScript, utilizando Tailwind para el diseño y Zustand para la gestión de estado",
+            "description": "Aplicación de gestión de tareas desarrollada como parte de un reto de Frontend Mentor. Este proyecto me permitió seguir mejorando mis habilidades con React y TypeScript, además de aprender Zustand para el manejo eficiente del estado global.",
             "sourceCodeUrl": "https://github.com/JonaRdzEs/to-do-app",
             "url": "https://jonardzes.github.io/to-do-app/"
-          }
+        },
+        {
+            "slug": "space-tourism",
+            "title": "Space tourism",
+            "description": "Página web desarrollada como parte de un reto de Frontend Mentor. Este proyecto me permitió aprender los fundamentos de Astro, enfocándome en mejorar el rendimiento y SEO. Además, implementé interactividad utilizando React para ofrecer una experiencia de usuario más dinámica.",
+            "sourceCodeUrl": "https://github.com/JonaRdzEs/space-tourism",
+            "url": "https://jonardzes.github.io/space-tourism/"
+        }
     ]
 }
